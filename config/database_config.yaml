@@ -1,0 +1,32 @@
+# 数据库配置文件
+# 本地数据库配置
+local_databases:
+  # HTTP API方式访问的本地数据库
+  - name: "标记位点SNVs"
+    type: "http_api"  # HTTP API访问方式
+    base_url: "http://58.211.191.32:9090/basicspace/workflow/workflowHistory/"  # 固定前缀
+    database_id: "68ad766a935353004b524e1c"  # 数据库ID
+    token: "QVTAxxRKQzFG9hMJDuhPcB"  # 访问令牌（需要替换为实际token）
+    description: "标记位点SNVs数据库"
+  
+  # 文件系统方式访问的本地数据库（示例）
+  - name: "本地知识库1"
+    type: "chroma"  # 或 "faiss" 等
+    path: "./data/local_db_1"
+    description: "本地数据库描述（文件系统方式）"
+
+# 公共数据库配置
+public_databases:
+  - name: "PubMed"
+    type: "api"
+    official_url: "https://pubmed.ncbi.nlm.nih.gov/"
+    api_endpoint: "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
+    description: "PubMed医学文献数据库"
+    access_method: "api"  # api, web_scraping, etc.
+  
+  - name: "UniProt"
+    type: "api"
+    official_url: "https://www.uniprot.org/"
+    api_endpoint: "https://rest.uniprot.org/"
+    description: "UniProt蛋白质数据库"
+    access_method: "api"

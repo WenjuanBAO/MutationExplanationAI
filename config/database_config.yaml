@@ -6,7 +6,7 @@ local_databases:
     type: "http_api"  # HTTP API访问方式
     base_url: "http://58.211.191.32:9090/basicspace/workflow/workflowHistory/"  # 固定前缀
     database_id: "68ad766a935353004b524e1c"  # 数据库ID
-    token: "QVTAxxRKQzFG9hMJDuhPcB"  # 访问令牌（需要替换为实际token）
+    token: ""  # 访问令牌（需要替换为实际token）
     description: "标记位点SNVs数据库"
   
   # 文件系统方式访问的本地数据库（示例）
